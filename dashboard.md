@@ -33,7 +33,7 @@
 1. ⏹ **NẾU** < 10 end-user thật **TRONG** 30 ngày từ go-live **THÌ** dừng tìm đối tác mới; tuần sau Linh + Hưng ngồi quầy tái khám 2 buổi đăng ký tận tay; bật báo cáo tuần cho chuyên gia **KHÔNG THÌ** không mở pilot đối tác thứ 2, không báo cáo "số đối tác đã ký".
 2. ⏹ **NẾU** duyệt nguyên bản < 57% **TRÊN** 2 tuần liền **VÀ** ≥20 thực đơn/tuần **THÌ** dừng nhận người bệnh mới; Hưng sửa 2 lý do sửa/từ chối nhiều nhất, chạy lại eval golden rồi mới mở **KHÔNG THÌ** không nới định nghĩa, không nhờ chuyên gia "bớt sửa".
 3. **NẾU** chi phí theo lượt dùng > 23,6% DT **TRONG** 2 tuần liền **VÀ** đối tác ≥20 người bệnh **THÌ** trong 3 ngày tách chi phí theo thành phần + p95 người bệnh, đặt trần 7 ảnh/tuần, đàm phán pass-through phần vượt **KHÔNG THÌ** không tăng giá đại trà, không bỏ bước chuyên gia duyệt.
-4. ⏹ **NẾU** ≥1 ca dị ứng/tương tác thuốc lọt hoặc > 1 ca/100 **TRÊN** 100 thực đơn gần nhất **THÌ** trong ngày tắt chế độ LLM, dừng nhận người bệnh mới 7 ngày, báo Trung tâm bằng văn bản trong 24 h, thêm ca vào golden set **KHÔNG THÌ** không sửa im lặng, không đổ lỗi chuyên gia.
+4. ⏹ **NẾU** ≥1 ca dị ứng/tương tác thuốc lọt hoặc > 1 ca/100 **TRÊN** 100 thực đơn gần nhất **THÌ** trong ngày tắt chế độ LLM, dừng nhận người bệnh mới 7 ngày, báo Partner A bằng văn bản trong 24 h, thêm ca vào golden set **KHÔNG THÌ** không sửa im lặng, không đổ lỗi chuyên gia.
 5. **NẾU** người bệnh tính phí < 53 **TRONG** 2 tháng trả phí liền **THÌ** đàm phán lại: cam kết tối thiểu 53 người hoặc phí nền 1,63 triệu₫/tháng; đặt QR ở 1 phòng khám ĐTĐ/thận **KHÔNG THÌ** không ký thêm đối tác để bù volume, không giảm giá.
 
 ### Cổng gác 90 ngày (ngày 0 = 09/10/2026)

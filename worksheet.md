@@ -24,13 +24,14 @@ tỷ giá 26.160₫/USD). Tất cả là **giả định / ước tính** — P-
 **Ba câu hỏi, theo thực tế hôm nay** (09/10/2026 — chưa ký đối tác nào; trả lời theo mô hình đã chốt ở Day 22):
 
 1. **Ai trả tiền?** Phòng khám / trung tâm dinh dưỡng (doanh nghiệp): 140.000₫/người bệnh đang theo dõi/tháng, đối tác
-   đầu tiên nhắm tới là Trung tâm Khám tư vấn dinh dưỡng — Viện Dinh dưỡng Quốc gia. Gia đình **không** trả: 58% người
+   đầu tiên nhắm tới là **Partner A** — một trung tâm khám tư vấn dinh dưỡng công lập ở Hà Nội (ẩn tên vì chưa được đối
+   tác cho phép, theo RULES.md). Gia đình **không** trả: 58% người
    trả lời khảo sát chỉ chịu chi < 100.000₫/tháng (SURVEY_REPORT, n = 79).
 2. **Ai dùng?** Người dùng hằng ngày là **người chăm sóc / người bệnh — khách của phòng khám**: ghi bữa, nhận cảnh báo,
    nhận thực đơn tuần. Chuyên gia của phòng khám chỉ dùng app duyệt (~1 lượt/người bệnh/tuần).
 3. **Có chạm được end-user không?** **Có.** Người chăm sóc đăng nhập web app của P-110 bằng tài khoản của P-110 (SĐT + OTP),
    P-110 giữ dữ liệu của họ (`meal_logs`, `meal_alerts`, `agent_runs` gắn `patient_id`), và cảnh báo hiện trực tiếp trên
-   màn hình của P-110. Tin ZNS 5h45 gửi qua Zalo OA của Trung tâm chỉ là điểm dẫn vào app.
+   màn hình của P-110. Tin ZNS 5h45 gửi qua Zalo OA của Partner A chỉ là điểm dẫn vào app.
 
 **Câu chốt loại:** Chúng tôi là **B2B2C** vì tiền đến từ **phòng khám dinh dưỡng** (140.000₫/người bệnh/tháng), người dùng
 thật là **người chăm sóc của người bệnh mạn tính — khách của phòng khám**, và chúng tôi chạm họ qua **web app người chăm sóc
@@ -189,8 +190,8 @@ riêng vì trước 09/11/2026 chưa có baseline; đèn #7 và #8 là bảng đ
 
 1. ⏹ **Partner activation (#1)** — **NẾU** đối tác pilot có **< 10 end-user thật** **TRONG** 30 ngày kể từ go-live
    **THÌ** **dừng** mọi việc tìm đối tác mới (không gửi email, không hẹn gặp BV tuyến tỉnh), và ngay tuần sau Linh + Hưng
-   ngồi tại quầy tái khám của Trung tâm 2 buổi: phát QR, đăng ký tận tay cho người bệnh cùng chuyên gia. Song song, Linh hỏi
-   trưởng Trung tâm "nếu bỏ P-110 ngày mai, Trung tâm mất gì?", rồi bật báo cáo tuần tự động cho chuyên gia để Trung tâm có
+   ngồi tại quầy tái khám của Partner A 2 buổi: phát QR, đăng ký tận tay cho người bệnh cùng chuyên gia. Song song, Linh hỏi
+   trưởng Partner A "nếu bỏ P-110 ngày mai, Partner A mất gì?", rồi bật báo cáo tuần tự động cho chuyên gia để Partner A có
    lợi rõ hơn. **KHÔNG THÌ** không khởi động pilot với đối tác thứ hai, và không báo cáo "số đối tác đã ký / đang trao
    đổi" như thành tích tăng trưởng.
 
@@ -210,7 +211,7 @@ riêng vì trước 09/11/2026 chưa có baseline; đèn #7 và #8 là bảng đ
 
 4. ⏹ **Ca an toàn lọt (#6)** — **NẾU** có **≥ 1 ca dị ứng hoặc tương tác thuốc** lọt tới người chăm sóc, **hoặc > 1 ca
    an toàn / 100 thực đơn** **TRÊN** 100 thực đơn `approved` gần nhất **THÌ** trong ngày Hưng **dừng** sinh thực đơn bằng
-   chế độ LLM (quay về chế độ luật) và **dừng** nhận người bệnh mới 7 ngày. Trong 24 giờ, Linh báo trưởng Trung tâm bằng văn
+   chế độ LLM (quay về chế độ luật) và **dừng** nhận người bệnh mới 7 ngày. Trong 24 giờ, Linh báo trưởng Partner A bằng văn
    bản: ca nào, vì sao lọt, sửa gì. Hưng thêm ca đó vào `clinical_golden.json` và sửa rule, eval đạt mới mở lại.
    **KHÔNG THÌ** không sửa im lặng mà không báo đối tác, và không quy lỗi cho chuyên gia "duyệt sót" — HITL là lớp chặn
    cuối, không phải lớp chặn duy nhất.
@@ -218,7 +219,7 @@ riêng vì trước 09/11/2026 chưa có baseline; đèn #7 và #8 là bảng đ
 5. **Người bệnh tính phí / đối tác (#4)** — **NẾU** số người bệnh tính phí của một đối tác **< 53** **TRONG** 2 tháng trả
    phí liên tiếp **THÌ** Linh **đàm phán lại** hợp đồng theo một trong hai cách: (a) cam kết tối thiểu 53 người bệnh/tháng,
    hoặc (b) phí nền cố định 1,63 triệu₫/tháng (= $62,4 hạ tầng) cộng phí theo người bệnh. Trong 2 tuần đó, Linh cùng trưởng
-   Trung tâm chọn 1 phòng khám ĐTĐ hoặc thận mạn của Trung tâm để đặt QR trên phiếu tư vấn. **KHÔNG THÌ** không ký thêm đối
+   Partner A chọn 1 phòng khám ĐTĐ hoặc thận mạn của mình để đặt QR trên phiếu tư vấn. **KHÔNG THÌ** không ký thêm đối
    tác để "bù" volume (đối tác mới tốn thêm một khoản hạ tầng và hỗ trợ cố định), và không giảm giá/người bệnh để kéo thêm
    người.
 
