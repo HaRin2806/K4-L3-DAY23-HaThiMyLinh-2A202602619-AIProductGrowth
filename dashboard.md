@@ -3,7 +3,7 @@
 **Loại mô hình:** B2B2C — phòng khám dinh dưỡng trả 140.000₫/người bệnh/tháng; người dùng thật là người chăm sóc (khách của phòng khám), chạm qua web app của P-110, dẫn vào bằng ZNS trên Zalo OA của phòng khám · **Cập nhật:** 09/10/2026 · Hà Thị Mỹ Linh – 2A202602619
 **NORTH STAR:** Người bệnh theo dõi tích cực/tuần (có thực đơn `approved` đang hiệu lực + ≥4/7 ngày ghi bữa) — hiện tại **0** — mục tiêu **120** ngày 07/01/2027
 
-*"Hiện" = chưa có đối tác thật; số trong ngoặc là giả định mô hình Day 22. Chi tiết định nghĩa, phép tính [MH]: `worksheet.md`.*
+*"Hiện" = chưa có đối tác thật; số trong ngoặc là giả định mô hình Day 22. Chi tiết định nghĩa, phép tính [MH] và link mọi nguồn (mở lại 09/10/2026): `worksheet.md` § Nguồn.*
 
 ### Đèn báo sớm (Leading — nhìn hằng tuần)
 

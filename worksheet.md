@@ -4,8 +4,10 @@ Họ tên: Hà Thị Mỹ Linh · MSSV: 2A202602619 · Ngày làm: 09/10/2026
 
 ## Số liệu đầu vào
 
-Nguồn: bài Mô hình tài chính & Value Metric (Day 22, file `HaThiMyLinh_Day22_model.xlsx`, giá kiểm tra 08/10/2026,
-tỷ giá 26.160₫/USD). Tất cả là **giả định / ước tính** — P-110 chưa có đối tác và người dùng thật.
+Nguồn: bài Mô hình tài chính & Value Metric (Day 22) của em —
+[`HaThiMyLinh_Day22_model.xlsx`](https://github.com/HaRin2806/Track1_Day22_2A202602619_HaThiMyLinh/blob/main/HaThiMyLinh_Day22_model.xlsx)
+(repo public; giá kiểm tra 08/10/2026, tỷ giá 26.160₫/USD). Cột "Ô nguồn" bên dưới trỏ tới ô trong file này. Tất cả là
+**giả định / ước tính** — P-110 chưa có đối tác và người dùng thật. Danh sách link nguồn đầy đủ: mục **Nguồn** cuối file.
 
 | Số | Giá trị | Ô nguồn |
 |---|---|---|
@@ -13,9 +15,9 @@ tỷ giá 26.160₫/USD). Tất cả là **giả định / ước tính** — P-
 | Giá / ARPU | 140.000₫/người bệnh/tháng ($1,24/job) · **$642/đối tác/tháng** (120 người bệnh) | 2_Pricing!B19 · 4_Channel_Fit!B5 |
 | Gross margin | **67,4%** (55,0% nếu tính overhead $56/đối tác/tháng) | 2_Pricing!B21 · C63 |
 | CAC | Ngân sách CAC **$5.194/đối tác** (= $642 × 67,4% × 12). CAC thực của kênh Partner-Led: **chưa đo** | 4_Channel_Fit!B9 |
-| CAC payback mục tiêu | **12 tháng** (SMB — Bessemer, Scaling to $100M, 2024) | 4_Channel_Fit!B8 · 6_Benchmarks!C38 |
-| Runway | **Chưa có.** Mô hình chưa có số vốn ban đầu và dòng tiền theo tháng (ROI_BUSINESS_CASE.md §4 đã bỏ payback/IRR vì lý do này) | — |
-| Cost/Job | **$0,404** (≈10.570₫) · $0,558 có overhead. Hạ tầng + Zalo ZNS + ảnh chiếm 60%, LLM 6% | 1_Cost_Job!B66:B67 |
+| CAC payback mục tiêu | **12 tháng** (SMB — [Bessemer, *Scaling to $100 Million*](https://www.bvp.com/atlas/scaling-to-100-million), đăng 21/09/2021, kiểm tra 09/10/2026: "SMB-focused accounts, you should target CAC payback <12 months"). *Đính chính: file Day 22 ghi nhầm năm 2024* | 4_Channel_Fit!B8 · 6_Benchmarks!C38 |
+| Runway | **Chưa có.** Mô hình chưa có số vốn ban đầu và dòng tiền theo tháng (tài liệu business case của nhóm P-110 cũng đã bỏ payback/IRR vì lý do này — repo nhóm là private) | — |
+| Cost/Job | **$0,404** (≈10.570₫) · $0,558 có overhead. Tính cả overhead: hạ tầng + Zalo ZNS + ảnh chiếm 60%, LLM 6% | 1_Cost_Job!B66:B67 |
 | Breakeven containment | 57,0% (GM 60%) · GM < 50% khi containment < 46% · hiện ước tính 70% | 2_Pricing!B33 · B56 · 1_Cost_Job!B10 |
 | Hạ tầng cố định | $62,4/tháng → GM < 50% khi 1 đối tác < ~53 người bệnh | 1_Cost_Job!E41 · 2_Pricing!B57 |
 
@@ -26,7 +28,8 @@ tỷ giá 26.160₫/USD). Tất cả là **giả định / ước tính** — P-
 1. **Ai trả tiền?** Phòng khám / trung tâm dinh dưỡng (doanh nghiệp): 140.000₫/người bệnh đang theo dõi/tháng, đối tác
    đầu tiên nhắm tới là **Partner A** — một trung tâm khám tư vấn dinh dưỡng công lập ở Hà Nội (ẩn tên vì chưa được đối
    tác cho phép, theo RULES.md). Gia đình **không** trả: 58% người
-   trả lời khảo sát chỉ chịu chi < 100.000₫/tháng (SURVEY_REPORT, n = 79).
+   trả lời khảo sát chỉ chịu chi < 100.000₫/tháng (khảo sát nhóm P-110, n = 79 — trích trong
+   [One-Pager Day 22](https://github.com/HaRin2806/Track1_Day22_2A202602619_HaThiMyLinh/blob/main/HaThiMyLinh_Day22_onepager.pdf), mục Ngân sách khách hàng).
 2. **Ai dùng?** Người dùng hằng ngày là **người chăm sóc / người bệnh — khách của phòng khám**: ghi bữa, nhận cảnh báo,
    nhận thực đơn tuần. Chuyên gia của phòng khám chỉ dùng app duyệt (~1 lượt/người bệnh/tuần).
 3. **Có chạm được end-user không?** **Có.** Người chăm sóc đăng nhập web app của P-110 bằng tài khoản của P-110 (SĐT + OTP),
@@ -50,7 +53,7 @@ phòng khám đưa vào quyết định, không do chúng tôi.
 | **O · GM sau rev-share** | 🔧 | Hôm nay chỉ có số mô hình 67,4% (chưa có rev-share vì phòng khám là bên trả tiền, không chia doanh thu). Cần: token thật từ `agent_runs`, hoá đơn Zalo ZNS, hoá đơn DigitalOcean theo tháng + điều khoản hợp đồng có/không chia doanh thu |
 | **O · Chi phí inference ÷ doanh thu theo TỪNG partner** | 🔧 | `agent_runs` đã ghi `input_tokens`/`output_tokens` theo `patient_id` → gộp được theo đối tác. Cần: bảng giá model theo ngày + cột cached tokens (hiện chưa tách, nên số tính ra sẽ cao hơn thật) + chi phí ảnh/vision và ZNS theo người bệnh |
 | **O · Tập trung volume** | 🔧 | Tính được ngay khi có đối tác đầu tiên từ `plan_review_events`. Biết trước kết quả: 90 ngày đầu chỉ có 1 đối tác → **100%, đỏ theo cấu trúc** |
-| **O · Chất lượng nhìn từ end-user** | 🔧 | Offline đã có ✅: phát hiện vi phạm 13/14, duyệt-nguyên-bản proxy 5/7 hồ sơ (`eval/results/report.md`, 07/10). Trên end-user thật: `plan_change_requests` (xin đổi món, `urgency = safety`), thực đơn bị `reject`. Cần: SLA chất lượng ký với đối tác + kênh khiếu nại |
+| **O · Chất lượng nhìn từ end-user** | 🔧 | Offline đã có ✅: phát hiện vi phạm 13/14, duyệt-nguyên-bản proxy 5/7 hồ sơ (eval nội bộ P-110 ngày 07/10/2026, trích trong One-Pager Day 22 mục Evidence Pack). Trên end-user thật: `plan_change_requests` (xin đổi món, `urgency = safety`), thực đơn bị `reject`. Cần: SLA chất lượng ký với đối tác + kênh khiếu nại |
 | **G · Doanh thu/partner · partner NRR · GM tổng** | ❌ | Chưa có doanh thu (pilot tháng 1 miễn phí). Doanh thu/partner có số sớm nhất sau tháng trả phí đầu tiên; NRR cần 12 tháng hợp đồng |
 
 ## Trạm 2 — Thẻ đèn
@@ -111,8 +114,8 @@ Kiểm tra: 3 Leading · 3 Operating · 2 Lagging (25%) · 1 đèn chi phí AI �
 | 4 | Người bệnh tính phí / đối tác (từ tháng trả phí đầu tiên) | ≥79 | 53–78 | **<53** | [MH] | Hạ tầng cố định $62,4/tháng: dưới 79 người bệnh thì GM < 60%, dưới 53 người thì GM < 50% (phép tính MH-2) |
 | 5 | Chi phí theo lượt dùng ÷ doanh thu (từng đối tác) | ≤16,6% | 16,6–23,6% | **>23,6%** | [MH] | Phần ngân sách chi phí theo lượt dùng còn lại sau khi trừ hạ tầng cố định và QA, ứng với GM 60% và 50%; mô hình hiện ở 11,5% (phép tính MH-3) |
 | 6 | Ca an toàn lọt / 100 thực đơn | 0 | ≤1/100 **và** không ca nào là dị ứng / tương tác thuốc | >1/100, **hoặc** ≥1 ca dị ứng / tương tác thuốc | [TB] | Chưa có chuẩn ngành. Mục tiêu CS-03 của P-110 là phát hiện 100%, eval offline mới đạt 13/14 (07/10/2026). Một ca lọt nghĩa là cả AI lẫn chuyên gia đều bỏ sót, và trách nhiệm lâm sàng thuộc về phòng khám. Pilot ~80 thực đơn → chỉ 1 ca là đã đỏ (1,25/100). Baseline: hết pilot, ngày 15/11/2026 |
-| 7 | GM theo từng đối tác | ≥60% | 50–60% | **<50%** | [MH] + [BM] đối chiếu | 60% là GM mục tiêu và 50% là vạch "mô hình gãy" của Day 22 (2_Pricing!B32, B56). Đối chiếu: GM công ty AI-native 53% (2026P) — ICONIQ *State of AI 2026* (07/2026), iconiq.com/growth/reports/state-of-ai-2026 — **kiểm tra 09/10/2026**: "45% in 2025 to a projected 53% in 2026, and 59% in 2027" |
-| 8 | Pilot → hợp đồng trả phí | ≥50% · *1 đối tác:* ký trong ≤30 ngày sau pilot | 36–50% · *ký sau 31–60 ngày* | <36% · ***chưa ký sau 60 ngày*** | [BM] | POC/free-trial → paid **~50% (2026)**, **~36% (2025)** — ICONIQ *State of Go-to-Market 2026*, iconiq.com/growth/reports/state-of-go-to-market-2026 — **kiểm tra 09/10/2026**: "conversion has climbed to roughly 50%, up 14 points year-over-year". Lấy mức 2026 làm vạch xanh, mức 2025 làm vạch đỏ |
+| 7 | GM theo từng đối tác | ≥60% | 50–60% | **<50%** | [MH] + [BM] đối chiếu | 60% là GM mục tiêu và 50% là vạch "mô hình gãy" của Day 22 (2_Pricing!B32, B56). Đối chiếu: GM công ty AI-native 53% (2026P) — ICONIQ *State of AI 2026* (07/2026), https://www.iconiq.com/growth/reports/state-of-ai-2026 — **kiểm tra 09/10/2026**: "45% in 2025 to a projected 53% in 2026, and 59% in 2027" |
+| 8 | Pilot → hợp đồng trả phí | ≥50% · *1 đối tác:* ký trong ≤30 ngày sau pilot | 36–50% · *ký sau 31–60 ngày* | <36% · ***chưa ký sau 60 ngày*** | [BM] | POC/free-trial → paid **~50% (2026)**, **~36% (2025)** — ICONIQ *State of Go-to-Market 2026*, https://www.iconiq.com/growth/reports/state-of-go-to-market-2026 — **kiểm tra 09/10/2026**: "conversion has climbed to roughly 50%, up 14 points year-over-year". Lấy mức 2026 làm vạch xanh, mức 2025 làm vạch đỏ |
 
 **Tự kiểm tra:** 8/8 đèn có ngưỡng, nguồn và lý do · 4 ngưỡng [MH] (#3, #4, #5, #7) · 2 [BM] đều có ngày · 3 [TB] có
 lịch đo. Các ngưỡng [MH] không tròn số (57%, 53, 79, 16,6%, 23,6%) vì được tính ra, không chọn tay.
@@ -230,8 +233,32 @@ riêng vì trước 09/11/2026 chưa có baseline; đèn #7 và #8 là bảng đ
 | 1 | "Đối tác này không đẩy thì tìm đối tác khác" | Đối tác thứ 2 cũng sẽ không đẩy nếu chưa biết vì sao đối tác 1 không đẩy; chỉ thêm chi phí hỗ trợ $56/tháng |
 | 2 | Nới định nghĩa, hoặc nhờ chuyên gia sửa ít đi | Đèn xanh giả; chuyên gia vẫn mất thời gian thật, nên đối tác vẫn không thấy lợi |
 | 3 | Tăng giá cho mọi người | Giá đã sát trần neo lương; tăng giá thì mất đối tác để cứu biên do vài người dùng nặng gây ra |
-| 4 | Sửa nhanh rồi im lặng | Trong B2B2C, lỗi của mình là khủng hoảng của phòng khám; giấu thì mất kênh (bài học Klarna) |
+| 4 | Sửa nhanh rồi im lặng | Trong B2B2C, lỗi của mình hiện ra dưới tên phòng khám; giấu thì phòng khám mất niềm tin và gỡ mình ra → mất luôn kênh duy nhất |
 | 5 | Ký thêm đối tác hoặc giảm giá | Mỗi đối tác mới thêm chi phí cố định; giảm giá làm GM tụt nhanh hơn |
 
 **Kiểm tra:** 5 luật · đủ NẾU / TRONG-TRÊN / THÌ / KHÔNG THÌ · vế VÀ ở luật 2, 3 (mẫu nhỏ dễ nhiễu) · 3 luật dừng ⏹
 (1, 2, 4) · mọi vế NẾU dùng đúng ngưỡng 🔴 của Trạm 3 · không luật nào kết thúc bằng "xem xét / theo dõi".
+
+## Nguồn
+
+Mọi link dưới đây em đã mở lại ngày **09/10/2026** và đối chiếu đúng con số được dùng.
+
+**Benchmark bên ngoài**
+
+| # | Nguồn | Số dùng trong bài | Dùng ở |
+|---|---|---|---|
+| 1 | ICONIQ — *2026 State of AI: The Builder's Economy* (07/2026) · https://www.iconiq.com/growth/reports/state-of-ai-2026 | "Gross margins … from 45% in 2025 to a projected 53% in 2026, and 59% in 2027" | Đèn #7 [BM] |
+| 2 | ICONIQ — *State of Go-to-Market 2026* · https://www.iconiq.com/growth/reports/state-of-go-to-market-2026 | "Free trial and POC conversion has climbed to roughly 50%, up 14 points year-over-year" (→ ~36% năm 2025) | Đèn #8 [BM] |
+| 3 | Bessemer — *Scaling to $100 Million* (21/09/2021) · https://www.bvp.com/atlas/scaling-to-100-million | "SMB … CAC payback <12 months; mid-market <18 months; enterprise <24 months" | CAC payback mục tiêu |
+| 4 | DigitalOcean — Droplet pricing · https://www.digitalocean.com/pricing/droplets | Basic 8 GiB / 4 vCPU = $48/tháng; daily backup = 30% giá droplet → $62,4 | Hạ tầng cố định F (MH-2, MH-3) |
+| 5 | Bảng giá Zalo ZNS (trang đại lý, không phải trang chính chủ ⚠️) · https://oazns.vn/bang-gia-zns | Tin thông thường 200₫; nút CTA thứ hai 100₫ (nút đầu miễn phí) | ZNS trong u. Day 22 tính 330₫/tin = 200 + 100 + VAT 10%, tức đã tính thêm 1 nút trả phí → **thận trọng**; nếu chỉ 1 nút thì 220₫/tin |
+
+**Số liệu của chính em / nhóm**
+
+| # | Nguồn | Mở được? | Dùng ở |
+|---|---|---|---|
+| 6 | Mô hình Day 22 · https://github.com/HaRin2806/Track1_Day22_2A202602619_HaThiMyLinh/blob/main/HaThiMyLinh_Day22_model.xlsx | ✅ public | Mọi ô "Ô nguồn", 4 phép tính [MH] |
+| 7 | One-Pager Day 22 · https://github.com/HaRin2806/Track1_Day22_2A202602619_HaThiMyLinh/blob/main/HaThiMyLinh_Day22_onepager.pdf | ✅ public | Khảo sát 58% (n = 79); eval 13/14 và 5/7; kế hoạch pilot 20 người bệnh |
+| 8 | Repo sản phẩm P-110 (schema DB `meal_logs`, `agent_runs`, `plan_review_events`; KPI CS-03; eval report) | ❌ repo private của tổ chức AI20K Build Phase | Định nghĩa đèn, cột "số nằm ở đâu". Có thể cấp quyền xem khi người chấm cần; các con số trích ra đều đã có trong #7 |
+
+Ngưỡng [TB] (#1, #2, #6) không dựa vào benchmark nào nên không có link, chỉ có lịch đo baseline ở Trạm 3.
